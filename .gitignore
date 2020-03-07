@@ -1,0 +1,10 @@
+.classpath
+.project
+.settings/
+target/
+/bin
+.idea/
+.idea/*
+/.idea/
+.iml
+services/node_modules
