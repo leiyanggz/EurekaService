@@ -42,7 +42,7 @@ module.exports = {
                            console.log('Successfully sent heartbeat to Eureka.');
                        }
                    }));
-               }, 50 * 1000);
+               }, 15 * 1000);
       
            } else {
                console.log(`Not registered with eureka due to: ${error}`);

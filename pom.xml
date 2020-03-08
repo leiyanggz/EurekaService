@@ -10,6 +10,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>service-registration-and-discovery-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+    <packaging>war</packaging>
 	<name>service-registration-and-discovery-service</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -55,6 +56,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <url>http://localhost:8080/manager/text</url>
+                    <server>tomcat</server>
+                    <path>/service-registration-and-discovery-service</path>
+                </configuration>
+            </plugin>
 		</plugins>
 	</build>
 
