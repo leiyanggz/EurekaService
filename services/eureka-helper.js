@@ -2,6 +2,7 @@ const request = require('request');
 const ip = require('ip');
 
 const eurekaService = `http://localhost:8761/eureka`;
+// const eurekaService = `http://localhost:8080/eureka-service-1.0/eureka`;
 
 module.exports = {
    registerWithEureka: (appName, port) => {
@@ -30,7 +31,7 @@ module.exports = {
        },
        (error, response, body) => {
            if(!error) {
-               console.log(`Registered with Eureka.`);
+               console.log(`Registered with Eureka. ${JSON.stringify(body, null ,4)}`);
                setInterval(() => {
                    request.put({
                        headers: {'content-type': 'application/json'},

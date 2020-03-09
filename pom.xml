@@ -63,7 +63,7 @@
                 <configuration>
                     <url>http://localhost:8080/manager/text</url>
                     <server>tomcat</server>
-                    <path>/service-registration-and-discovery-service</path>
+                    <path>/eureka</path>
                 </configuration>
             </plugin>
 		</plugins>
